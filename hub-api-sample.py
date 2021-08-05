@@ -8,6 +8,9 @@ import os
 import sys
 
 
+__docformat__ = "google"
+
+
 class Settings(BaseSettings):
     """Environment variables for configuration."""
 
@@ -110,7 +113,7 @@ class HubAPIClient:
         """
         Returns a list of shipping types that are valid for the given country ID.
 
-        Params:
+        Args:
             country_id:
                 The Hub country ID for the desired country.
             name_filter:
@@ -155,7 +158,7 @@ class HubAPIClient:
         """
         Creates a new basket.
 
-        Params:
+        Args:
             purchase_order_number: Resellers PO number
             shipping_address: Customers delivery address
             shipping_type: ID of the desired shipping service
@@ -211,7 +214,7 @@ if __name__ == "__main__":
         {
             "product_code": "2200-48820-025",
             "quantity": 3,
-            "prov_product_code": "UD-SIP-SER-PRV-PH", 
+            "prov_product_code": "UD-SIP-SER-PRV-PH",
         },
     ]
 
