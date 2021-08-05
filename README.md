@@ -29,7 +29,7 @@ provided by creating a `.env` file:
 | CLIENT_ID | The Hub API client ID |
 | CLIENT_SECRET | The Hub API client secret |
 
-You can create both of these from the *API Clients` tab in Hub.
+You can create both of these from the *API Clients* tab in Hub.
 
 Execute the script as follows:
 
