@@ -38,11 +38,10 @@ class HubAPIClient:
         self._base_url = base_url
         token_url = urljoin(self._base_url, "/api/v1/oauth/create_token")
         client = BackendApplicationClient(client_id=client_id)
-        oauth_body = client.prepare_request_body(
-            client_secret=client_secret, include_client_id=True
-        )
         self._session = OAuth2Session(client=client)
-        self._session.fetch_token(token_url=token_url, body=oauth_body)
+        self._session.fetch_token(
+            token_url=token_url, include_client_id=True, client_secret=client_secret
+        )
 
     def _get(self, path):
         """
